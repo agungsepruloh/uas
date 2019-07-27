@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if ( !isset($_SESSION['login']) ) {
+    header('Location: login.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +28,10 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="services.php">Services</a></li>
-                        <li class="current"><a href="product.php">Product</a></li>
+                        <li class="current"><a href="products.php">Products</a></li>
+                        <?php if ( isset($_SESSION['login'])) : ?>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>

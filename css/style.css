@@ -30,6 +30,7 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   color: #ffffff;
+  margin-top: 5px;
 }
 
 .dark {
@@ -169,7 +170,8 @@ footer {
 }
 
 /* Product */
-#product {
+#product,
+#main {
   margin-top: 20px;
 }
 
@@ -185,14 +187,27 @@ footer {
 }
 
 .product {
+  padding-left: 20px;
+  padding-right: 20px;
   margin: auto;
   background-color: #ffffff;
   box-shadow: grey 5px 4px 10px;
 }
 
-/* .product h1 {
-  border-bottom: #1693a5 4px solid;
-} */
+/* login */
+.login {
+  margin: 0 auto 100px;
+  padding-bottom: 40px;
+  width: 40%;
+}
+
+.login input {
+  width: 95%;
+}
+
+.login div {
+  margin-top: 20px;
+}
 
 /* Media Queries */
 @media(max-width: 768px) {
@@ -228,6 +243,5 @@ footer {
   .quote input,
   .quote textarea {
     width: 100%;
-    margin-bottom: 5px;
   }
 }

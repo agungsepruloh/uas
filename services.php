@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if ( !isset($_SESSION['login']) ) {
+    header('Location: login.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +27,10 @@
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li class="current"><a href="services.php">Services</a></li>
-                        <li><a href="product.php">Product</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <?php if ( isset($_SESSION['login'])) : ?>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>
@@ -28,7 +41,7 @@
         </section>
 
         <section id="main">
-            <div class="container">
+            <div class="container product">
                 <article id="main-col">
                     <h1 class="page-title">Services</h1>
                     <ul id="services">
@@ -77,7 +90,7 @@
         </section>
 
         <footer>
-            <p>Food Website, Copyright &copy; 2017</p>
+            <p>Food Website, Copyright &copy; <?= date('Y') ?></p>
         </footer>
     </body>
 

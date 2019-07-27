@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if ( !isset($_SESSION['login']) ) {
+  header('Location: login.php');
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +27,10 @@
                         <li class="current"><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="services.php">Services</a></li>
-                        <li><a href="product.php">Product</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <?php if ( isset($_SESSION['login'])) : ?>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php endif; ?>
                     </ul>
                 </nav>
             </div>
@@ -25,7 +38,7 @@
 
         <section id="showcase">
             <div class="container">
-                <h1>Affordable Professional Web</h1>
+                <h1>Hello, <?= $_SESSION['name'] . '!'; ?></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna.
                     Nulla
                     nec magna sit amet sem interdum condimentum.</p>
@@ -37,7 +50,7 @@
         </section>
 
         <section id="boxes">
-            <div class="container">
+            <div class="container product">
                 <div class="box">
                     <img src="./img/logo_html.png">
                     <h3>HTML5 Markup</h3>
