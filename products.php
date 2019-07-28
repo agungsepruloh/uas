@@ -6,6 +6,8 @@ if ( !isset($_SESSION['login']) ) {
     exit;
 }
 
+require('list.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +17,19 @@ if ( !isset($_SESSION['login']) ) {
         <title>Food Website | Welcome</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="css/second.css">
+        <style>
+            .btn {
+                padding: 5px;
+                min-width: 100px;
+            }
+            .box {
+                float: none!important;
+                display: inline-block;
+            }
+            .product {
+                padding-bottom: 20px;
+            }
+        </style>
     </head>
 
     <body>
@@ -41,94 +56,61 @@ if ( !isset($_SESSION['login']) ) {
             <div class="container product">
                 <h1 class="page-title"><span class="highlight">Fo</span>ods</h1>
 
-                <div class="box">
-                    <img src="./img/products/pizza1.jpg">
-                    <h3>Pizza With Berries</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/pizza2.jpg">
-                    <h3>Cheese Pepperoni Pizza</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/pizza4.jpg">
-                    <h3>Classic Pizza</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-
-                <div class="box">
-                    <img src="./img/products/pizza6.jpg">
-                    <h3>Pepperoni Pizza</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/pizza3.jpg">
-                    <h3>Pizza Box</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/pizza5.jpg">
-                    <h3>Round Pizza</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
+                <?php
+                    foreach($foodsanddrinks as $k => $v) {
+                        if($v['tipe'] == 'food') {
+                            echo '
+                            <div class="box">
+                                <img src="'.$v['gambar'].'">
+                                <h3 id="'.$k.'">'.$v['nama'].'</h3>
+                                <p><b>Rp'.number_format($v['harga'], 0, ',', '.').'</b></p>
+                                <button class="btn" onclick="beli()">Beli</button>
+                            </div>
+                            ';
+                        }
+                    }
+                ?>
+                
             </div>
         </section>
 
         <section id="product">
             <div class="container product">
                 <h1 class="page-title">Dri<span class="highlight">nks</span></h1>
-
-                <div class="box">
-                    <img src="./img/products/drink1.jpg">
-                    <h3>Water and Lemon</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/drink2.jpg">
-                    <h3>Lemon Juice</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/drink3.jpg">
-                    <h3>Liquor Pouring</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-
-                <div class="box">
-                    <img src="./img/products/drink4.jpg">
-                    <h3>Lemon and Strawberry Juice</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/drink5.jpg">
-                    <h3>Watermelon with Lemon</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
-                <div class="box">
-                    <img src="./img/products/drink6.jpg">
-                    <h3>Sliced Citrus Fruit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
-                </div>
+                <?php
+                    foreach($foodsanddrinks as $k => $v) {
+                        if($v['tipe'] == 'drink') {
+                            echo '
+                            <div class="box">
+                                <img src="'.$v['gambar'].'">
+                                <h3>'.$v['nama'].'</h3>
+                                <p><b>Rp'.number_format($v['harga'], 0, ',', '.').'</b></p>
+                                <button class="btn" id="'.$k.'" onclick="beli('.$k.')">Beli</button>
+                            </div>
+                            ';
+                        }
+                    }
+                ?>
+                
             </div>
         </section>
 
+        <form method="post" action="transaksi.php" name="transaksi">
+            <input type="hidden" name="id">
+            <input type="hidden" name="jumlah">
+        </form>
 
         <footer>
             <p>Food Website, Copyright &copy; <?= date('Y') ?></p>
         </footer>
     </body>
 
+    <script>
+        function beli(id) {
+            jumlah = prompt('Masukkan jumlah yang ingin dibeli');
+            transaksi.id.value = id;
+            transaksi.jumlah.value = jumlah;
+            transaksi.submit();
+        }
+    </script>
 </html>
