@@ -12,15 +12,16 @@ if ( !isset($_SESSION['login']) ) {
 <html>
 
     <head>
-        <title>Food Website | About</title>
+        <title>Pizza Party | About</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link href="./img/logo.ico" rel="shortcut icon">
     </head>
 
     <body>
         <header>
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Food</span> Website</h1>
+                    <h1><span class="highlight">Pizza</span> Party</h1>
                 </div>
                 <nav>
                     <ul>

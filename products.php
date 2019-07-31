@@ -14,9 +14,10 @@ require('list.php');
 <html>
 
     <head>
-        <title>Food Website | Welcome</title>
+        <title>Pizza Party | Welcome</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="css/second.css">
+        <link href="./img/logo.ico" rel="shortcut icon">
         <style>
             .btn {
                 padding: 5px;
@@ -36,7 +37,7 @@ require('list.php');
         <header>
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Food</span> Website</h1>
+                    <h1><span class="highlight">Pizza</span> Party</h1>
                 </div>
                 <nav>
                     <ul>

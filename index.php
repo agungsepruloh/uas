@@ -12,15 +12,16 @@ if ( !isset($_SESSION['login']) ) {
 <html>
 
     <head>
-        <title>Food Website | Welcome</title>
+        <title>Pizza Party | Welcome</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link href="./img/logo.ico" rel="shortcut icon">
     </head>
 
     <body>
         <header>
             <div class="container">
                 <div id="branding">
-                    <h1><span class="highlight">Food</span> Website</h1>
+                    <h1><span class="highlight">Pizza</span> Party</h1>
                 </div>
                 <nav>
                     <ul>
@@ -39,9 +40,7 @@ if ( !isset($_SESSION['login']) ) {
         <section id="showcase">
             <div class="container">
                 <h1>Hello, <?= $_SESSION['name'] . '!'; ?></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna.
-                    Nulla
-                    nec magna sit amet sem interdum condimentum.</p>
+                <p>All You Need is Pizza. Love at First Bite. Eat, Drink, and Be Lazy. Order it now!</p>
             </div>
         </section>
 
@@ -52,22 +51,19 @@ if ( !isset($_SESSION['login']) ) {
         <section id="boxes">
             <div class="container product">
                 <div class="box">
-                    <img src="./img/logo_html.png">
-                    <h3>HTML5 Markup</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
+                    <img src="./img/logo-plus.png">
+                    <h3>Love at First Bite</h3>
+                    <p>Rasakan sensasi kelezatan dan nikmatnya Pizza (merk). Kelezatan yang belum pernah dirasakan sebelumnya yang bikin nagih!</p>
                 </div>
                 <div class="box">
-                    <img src="./img/logo_css.png">
-                    <h3>CSS3 Styling</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
+                    <img src="./img/logo-plus2.png" style="width: 50%;">
+                    <h3>Good Quality, Cheap Price</h3>
+                    <p>Harga murah, kualitas tidak kalah dengan restoran sebelah</p>
                 </div>
                 <div class="box">
-                    <img src="./img/logo_brush.png">
-                    <h3>Graphic</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet
-                        ultricies</p>
+                    <img src="./img/logo-plus3.png" style="width: 39%;">
+                    <h3>Only with the best ingredients</h3>
+                    <p>Produk ini dibuat dengan bahan dasar yang berkualitas serta diolah dengan orang-orang yang berpengalaman</p>
                 </div>
             </div>
         </section>
