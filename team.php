@@ -24,7 +24,7 @@ if ( isset($_POST["go"]) ) {
 <html>
 
     <head>
-        <title>Pizza Party | Welcome</title>
+        <title>Pizza Party | Team</title>
         <link rel="stylesheet" href="./css/style.css">
         <link href="./img/logo.ico" rel="shortcut icon">
     </head>
