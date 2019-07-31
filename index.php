@@ -27,7 +27,7 @@ if ( !isset($_SESSION['login']) ) {
                     <ul>
                         <li class="current"><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
-                        <li><a href="services.php">Services</a></li>
+                        <li><a href="team.php">Team</a></li>
                         <li><a href="products.php">Products</a></li>
                         <?php if ( isset($_SESSION['login'])) : ?>
                             <li><a href="logout.php">Logout</a></li>

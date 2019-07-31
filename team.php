@@ -1,21 +1,10 @@
 <?php 
-
+include 'creator.php';
 session_start();
 
-if ( isset($_SESSION['login']) ) {
-    header('Location: index.php');
+if ( !isset($_SESSION['login']) ) {
+    header('Location: login.php');
     exit;
-}
-
-if ( isset($_POST["go"]) ) {
-
-    if ($_POST['name'] != NULL && $_POST['email'] != NULL) {
-            $_SESSION['login'] = true;
-            $_SESSION['name'] = $_POST['name'];
-            header('Location: index.php');
-    }
-
-    $error = true;
 }
 
 ?>
@@ -24,9 +13,10 @@ if ( isset($_POST["go"]) ) {
 <html>
 
     <head>
-        <title>Pizza Party | Team</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <title>Pizza Party | About</title>
         <link href="./img/logo.ico" rel="shortcut icon">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style_team.css">
     </head>
 
     <body>
@@ -37,9 +27,9 @@ if ( isset($_POST["go"]) ) {
                 </div>
                 <nav>
                     <ul>
-                        <li class="current"><a href="index.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
-                        <li><a href="services.php">Services</a></li>
+                        <li class="current"><a href="team.php">Team</a></li>
                         <li><a href="products.php">Products</a></li>
                         <?php if ( isset($_SESSION['login'])) : ?>
                             <li><a href="logout.php">Logout</a></li>
@@ -49,29 +39,26 @@ if ( isset($_POST["go"]) ) {
             </div>
         </header>
 
-        <section id="main">
-            <div class="container product">
-                <h1 class="page-title">Guest Page</h1>
+        <section id="line">
+            <div class="container"></div>
+        </section>
 
-                <div class="dark login">
-                    <form action="" method="post" class="quote">
-                        <?php if( isset($error)) : ?>
-                            <p style="color: red; text-align: center"><i>Please fill all the field!</i></p>
-                        <?php endif; ?>
-                        <div>
-                            <label for="name">Name</label> <br>
-                            <input type="text" id="name" name="name" placeholder="Name">
-                        </div>
-                        <div>
-                            <label for="email">Email</label> <br>
-                            <input type="email" id="email" name="email" placeholder="Email Address">
-                        </div>
-                        <div>
-                            <button class="button_1" type="submit" name="go">Go</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <section id="main">
+            <h1 class="heading">Meet The Team</h1>
+			<div class="card-wrapper">
+				<?php foreach ($data as $key => $value): ?>
+					<div class="card">
+						<img src="img/profile_pic/bg.jpg" alt="card background" class="card-img">
+						<img src="img/profile_pic/<?php echo $value['foto']; ?>" alt="profile image" class="profile-img">
+						<h1><?php echo $value['nama']; ?></h1>
+						<p class="job-tittle"><?php echo $value['pekerjaan']; ?></p>
+						<p class="about">
+							<?php echo $value['about']; ?>
+						</p>
+						<a href="#" onclick="alert('Anda bisa menghubungi saya di <?php echo $value['contact']; ?>')" class="btn">Contact</a>
+					</div>
+				<?php endforeach ?>
+			</div>
         </section>
 
         <footer>
