@@ -65,7 +65,7 @@ require('list.php');
                                 <img src="'.$v['gambar'].'">
                                 <h3 id="'.$k.'">'.$v['nama'].'</h3>
                                 <p><b>Rp'.number_format($v['harga'], 0, ',', '.').'</b></p>
-                                <button class="btn" onclick="beli('.$k.')">Beli</button>
+                                <button class="btn button_1" onclick="beli('.$k.')">Beli</button>
                             </div>
                             ';
                         }
@@ -86,7 +86,7 @@ require('list.php');
                                 <img src="'.$v['gambar'].'">
                                 <h3>'.$v['nama'].'</h3>
                                 <p><b>Rp'.number_format($v['harga'], 0, ',', '.').'</b></p>
-                                <button class="btn putton_1" id="'.$k.'" onclick="beli('.$k.')">Beli</button>
+                                <button class="btn button_1" id="'.$k.'" onclick="beli('.$k.')">Beli</button>
                             </div>
                             ';
                         }

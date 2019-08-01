@@ -86,8 +86,8 @@ require('list.php');
                     </tr>
                     </table>
                     <br>
-                    <a href="products.php"><button>Kembali</button></a>
-                    <button onclick="simpan()">Submit</button></center>';
+                    <a href="products.php"><button class="button_1" style="background-color: grey">Kembali</button></a>
+                    <button onclick="simpan()" class="button_1">Submit</button></center>';
                 
                 ?>
                 
