@@ -30,7 +30,7 @@ $data = [
 		'pekerjaan' => 'Web Developer',
 		'nim' => 10118907,
 		'foto' => 'yazid.jpg',
-		'about' => 'Saya adalah seorang mahasiswa Teknik Informatika Universitas Komputer Indonesia.',
+		'about' => 'Saya adalah seorang mahasiswa Teknik Informatika Universitas Komputer Indonesia. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
 		'contact' => 'fadlullahyazid@gmail.com'
 	],
 ];
