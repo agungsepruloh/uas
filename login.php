@@ -75,7 +75,7 @@ if ( isset($_POST["go"]) ) {
         </section>
 
         <footer>
-            <p>Food Website, Copyright &copy; <?= date('Y') ?></p>
+            <p>Pizza Party, Copyright &copy; <?= date('Y') ?></p>
         </footer>
     </body>
 

@@ -2,8 +2,8 @@
 session_start();
 
 if ( !isset($_SESSION['login']) ) {
-  header('Location: login.php');
-  exit;
+    header('Location: login.php');
+    exit;
 }
 
 ?>
@@ -40,7 +40,7 @@ if ( !isset($_SESSION['login']) ) {
         <section id="showcase">
             <div class="container">
                 <h1>Hello, <?= $_SESSION['name'] . '!'; ?></h1>
-                <p>All You Need is Pizza. Love at First Bite. Eat, Drink, and Be Lazy. Order it now!</p>
+                <p>All You Need is Pizza. <br>Love at First Bite. Eat, Drink, and Be Lazy. <br>Order it now!</p>
             </div>
         </section>
 
@@ -69,7 +69,7 @@ if ( !isset($_SESSION['login']) ) {
         </section>
 
         <footer>
-            <p>Food Website, Copyright &copy; <?= date('Y') ?></p>
+            <p>Pizza Party, Copyright &copy; <?= date('Y') ?></p>
         </footer>
     </body>
 

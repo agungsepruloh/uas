@@ -55,7 +55,7 @@ if ( !isset($_SESSION['login']) ) {
 						<p class="about">
 							<?php echo $value['about']; ?>
 						</p>
-						<a href="#" onclick="alert('Anda bisa menghubungi saya di <?php echo $value['contact']; ?>')" class="btn">Contact</a>
+                        <a href="mailto:<?= $value['contact'] ?>" class="btn">Contact</a>
 					</div>
 				<?php endforeach ?>
 			</div>

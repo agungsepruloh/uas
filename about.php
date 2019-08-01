@@ -45,36 +45,45 @@ if ( !isset($_SESSION['login']) ) {
             <div class="container product">
                 <article id="main-col">
                     <h1 class="page-title">About Us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat.
-                        Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros, dapibus eget
-                        porta in, lacinia et magna. Nam eget eros non orci consectetur congue at ac augue. Proin eget
-                        arcu in enim feugiat ultricies. Curabitur maximus metus nec metus pretium viverra at et orci.
-                        Integer hendrerit ante ut placerat cursus.
+                    <p style="text-align: justify; text-indent: 20px">
+                        As the franchisee in Indonesia, Pizza Party owns the right to develop and operate Pizza Party restaurants across
+                        Indonesia based on the international franchise agreement with Pizza Party Restaurants Asia Ltd. At present, with the
+                        exception of the outlet at the airport, Pizza Party is the master franchisee of Pizza in Indonesia. Pizza Party has
+                        successfully received the Asia Franchisee of the Year award from YUM! Pizza Party Asia for the year 2015, 2016, 2017,
+                        2018, and 2019.
                     </p>
-                    <p class="dark">
-                        Aliquam eget pharetra diam. Nulla placerat lorem at turpis tempor, vel ultrices dui tincidunt.
-                        Proin quis egestas lorem. Mauris vehicula lectus odio, sit amet dictum justo feugiat a. Praesent
-                        id dictum lacus. Sed ullamcorper id erat ut dictum. Fusce porttitor lorem sapien, in aliquet
-                        sapien convallis et. Donec nec mauris nulla. Curabitur cursus semper odio, et hendrerit ante.
-                        Nunc at cursus ante. Maecenas gravida ligula ut efficitur suscipit. Nulla id turpis varius,
-                        pretium nunc sed, fermentum sem. Sed lacinia nunc non interdum pellentesque.
+
+                    <p style="text-align: justify; text-indent: 20px">
+                        Pizza Party offers innovative and extensive menus that cater Indonesian consumers, targeting middle-class teenagers and
+                        families. Pizza Party is popularly known for its original pan pizza and its iconic cheesy bites menu. Pizza Party as
+                        developed two different concepts, namely the PHR and PHD outlets. Pizza Party offers dine-in service, delivery service,
+                        and online sales with extensive network. Pizza Party believes that its current sales concepts and channels will provide
+                        flexibility for sustainable growth. Therefore, Pizza Party continues to create innovations in its menu selection by
+                        adapting the menu according to the palate of Indonesian people, and to improve its services to customers.
+                    </p>
+                    <p class="dark" style="text-align: justify">
+                        Pizza Party recognizes the importance of having a Halal Certificate for a foodservice company in a Muslim-majority
+                        country. In 2014, Pizza Party obtained the halal certificate from MUI. Up to now, Pizza Party continues to maintain its
+                        halal certification with the commitment to continuously provide halal products to provide convenience, security and
+                        satisfaction to consumers.
                     </p>
                 </article>
 
                 <aside id="sidebar">
                     <div class="dark">
                         <h3>What We Do</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec
-                            feugiat. Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros,
-                            dapibus eget porta in, lacinia et magna</p>
+                        <p>The Company recognizes the importance of having a Halal Certificate for a foodservice company in a Muslim-majority
+                        country. In 2014, the Company obtained the halal certificate from MUI.</p>
+                        <p>Up to now, the Company continues to maintain its
+                        halal certification with the commitment to continuously provide halal products to provide convenience, security and
+                        satisfaction to consumers.</p>
                     </div>
                 </aside>
             </div>
         </section>
 
         <footer>
-            <p>Food Website, Copyright &copy; <?= date('Y') ?></p>
+            <p>Pizza Party, Copyright &copy; <?= date('Y') ?></p>
         </footer>
     </body>
 
