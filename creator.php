@@ -27,10 +27,10 @@ $data = [
 	],
 	[
 		'nama' => 'Yazid FA',
-		'pekerjaan' => 'Web Programmer',
-		'nim' => 101189,
-		'foto' => 'user.jpg',
-		'about' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.',
-		'contact' => ''
+		'pekerjaan' => 'Web Developer',
+		'nim' => 10118907,
+		'foto' => 'yazid.jpg',
+		'about' => 'Saya adalah seorang mahasiswa Teknik Informatika Universitas Komputer Indonesia.',
+		'contact' => 'fadlullahyazid@gmail.com'
 	],
 ];
