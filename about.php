@@ -61,6 +61,19 @@ if ( !isset($_SESSION['login']) ) {
                         flexibility for sustainable growth. Therefore, Pizza Party continues to create innovations in its menu selection by
                         adapting the menu according to the palate of Indonesian people, and to improve its services to customers.
                     </p>
+
+                    <p style="text-align: justify; text-indent: 20px">
+                        The Company was established in 2009 and is engaging businesses in a consumer foodservice industry, particularly pizza in
+                        Indonesia through the franchise owned by the Company. After developed the Pizza Party brand in Indonesia, the Company
+                        was acquired by Sriboga Group in 2016, and since the acquisition, the growth of the Company’s outlets was rapidly
+                        increase. The Company has been supported by Sriboga Group with various support and guidance from SRR or other company in
+                        Sriboga group. Based on the Euromonitor's Report, in 2016 the Company was the largest pizza chain and, with a market
+                        share of 86.6%, with PHR holding a 97.0% market share and PHD holding a 64.6% market share. As of December 31, 2017, the
+                        Company operated 237 PHR outlets and 156 PHD outlets located in 28 provinces in Indonesia. In addition on February 2018,
+                        the Company owns 397 combined PHR and PHD outlets. The Company's restaurants and outlets offer a wide range of high
+                        quality pizza and complementary menus to its customers.
+                    </p>
+
                     <p class="dark" style="text-align: justify">
                         Pizza Party recognizes the importance of having a Halal Certificate for a foodservice company in a Muslim-majority
                         country. In 2014, Pizza Party obtained the halal certificate from MUI. Up to now, Pizza Party continues to maintain its

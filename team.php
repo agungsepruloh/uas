@@ -44,7 +44,7 @@ if ( !isset($_SESSION['login']) ) {
         </section>
 
         <section id="main">
-            <h1 class="heading">Meet The Team</h1>
+            <h1 class="heading">Meet <span class="highlight">The Team</span></h1>
 			<div class="card-wrapper">
 				<?php foreach ($data as $key => $value): ?>
 					<div class="card">
