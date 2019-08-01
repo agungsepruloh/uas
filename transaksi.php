@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if ( !isset($_SESSION['login']) ) {
+if ( !isset($_SESSION['login']) || $_SERVER['REQUEST_METHOD'] != 'POST' ) {
     header('Location: login.php');
     exit;
 }
@@ -56,15 +56,38 @@ require('list.php');
             <div class="container product">
                 <h1 class="page-title">Transaction</h1>
                 <?php
-                if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo '
-                    <input type="text" name="nama" id="">
-                    <input type="text" name="pesanan" id="" value="'.$foodsanddrinks[$_POST['id']]['nama'].'" readonly>
-                    <input type="text" name="jumlah" id="" value="'.$_POST['jumlah'].'" readonly>
-                    <input type="text" name="harga" id="" value="'.$foodsanddrinks[$_POST['id']]['harga'].'" readonly>
-                    <input type="text" name="totalharga" value="'.$foodsanddrinks[$_POST['id']]['harga'] * $_POST['jumlah'].'" id="" readonly>
-                    ';
-                }
+                    <center><table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td>'.$_SESSION['name'].'</td>
+                    </tr>
+                    <tr>
+                        <td>Pesanan</td>
+                        <td>:</td>
+                        <td>'.$foodsanddrinks[$_POST['id']]['nama'].'</td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah</td>
+                        <td>:</td>
+                        <td>'.number_format($_POST['jumlah'], 0, ',', '.').'</td>
+                    </tr>
+                    <tr>
+                        <td>Harga</td>
+                        <td>:</td>
+                        <td>Rp'.number_format($foodsanddrinks[$_POST['id']]['harga'], 0, ',', '.').'</td>
+                    </tr>
+                    <tr>
+                        <td>Total Harga</td>
+                        <td>:</td>
+                        <td>Rp'.number_format($foodsanddrinks[$_POST['id']]['harga'] * $_POST['jumlah'], 0, ',', '.').'</td>
+                    </tr>
+                    </table>
+                    <br>
+                    <a href="products.php"><button>Kembali</button></a>
+                    <button onclick="simpan()">Submit</button></center>';
+                
                 ?>
                 
             </div>
@@ -76,5 +99,12 @@ require('list.php');
     </body>
 
     <script>
+        function simpan() {
+            setuju = confirm('Apakah Anda yakin?');
+            if(setuju) {
+                alert('Terima kasih, pesanan Anda akan segera kami kirim');
+                window.location = 'index.php';
+            }
+        }
     </script>
 </html>

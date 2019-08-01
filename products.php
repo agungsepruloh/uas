@@ -64,7 +64,7 @@ require('list.php');
                                 <img src="'.$v['gambar'].'">
                                 <h3 id="'.$k.'">'.$v['nama'].'</h3>
                                 <p><b>Rp'.number_format($v['harga'], 0, ',', '.').'</b></p>
-                                <button class="btn" onclick="beli()">Beli</button>
+                                <button class="btn" onclick="beli('.$k.')">Beli</button>
                             </div>
                             ';
                         }
@@ -110,7 +110,16 @@ require('list.php');
             jumlah = prompt('Masukkan jumlah yang ingin dibeli');
             transaksi.id.value = id;
             transaksi.jumlah.value = jumlah;
-            transaksi.submit();
+            if(jumlah) {
+                // taken and inspired from https://stackoverflow.com/questions/1133770/convert-a-string-to-an-integer-in-javascript
+                if(Number(jumlah)) {
+                    transaksi.submit();
+                } else {
+                    alert('Mohon isi dengan angka');
+                }
+                
+            }
+            
         }
     </script>
 </html>
